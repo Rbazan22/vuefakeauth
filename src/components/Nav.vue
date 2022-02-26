@@ -10,17 +10,13 @@
                 </li>
                 </router-link>
 
-                <router-link :to="{name: 'Send Us'}">
-                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">Send           </li>
-                </router-link>
-
-                <router-link :to = "{path: '/apply', name: 'Apply'}">
-                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">Apply
+                <router-link :to = "{path: '/about', name: 'About'}">
+                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">About
                 </li>
                 </router-link>
 
-                <router-link :to = "{path: '/aboutus', name: 'About Us'}">
-                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">About Us
+                <router-link :to = "{path: '/login', name: 'Login'}">
+                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">Login
                 </li>
                 </router-link>
             </ul>
