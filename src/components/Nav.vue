@@ -19,6 +19,11 @@
                 <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">Login
                 </li>
                 </router-link>
+
+                <router-link :to = "{ name: 'Secret' }">
+                <li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800 hover:animate-pulse">Secret
+                </li>
+                </router-link>
             </ul>
         </nav>
     </div>
