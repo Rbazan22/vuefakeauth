@@ -2,6 +2,7 @@
 import {ref} from "vue";
 import {useRouter} from "vue-router";
 import useAuth from "../composable/useAuth";
+import useError from "../composable/useError";
 
 const {isAuthenticated, login} = useAuth();
 
@@ -14,8 +15,15 @@ const logginIn = () => {
   login(username.value, password.value);
   if (isAuthenticated.value) {
       router.push("/");
+  } else {
+      setError("Invalid username or password");
+      start();
   }
 };
+
+const {error, setError} = useError();
+import { useTimeout, promiseTimeout } from "@vueuse/core";
+const { ready, start } = useTimeout(3000, { controls: true });
 </script>
 
 <template>
@@ -28,6 +36,12 @@ const logginIn = () => {
         <input type="password" class="p-2 border-2 rounded-lg" placeholder="Password" v-model="password" />
         <button type="submit" @submit.prevent="logginIn" class="py-2 text-indigo-200 bg-indigo-600 rounded-lg" >Login</button>    
     </form>
+    </div>
+    <div 
+    v-if="!ready && error"
+    class="absolute w=1/3 p-4 bg-red-300 text-center rounded-lg text-red-800 bottom-2 right-2"
+    >
+    {{error}}
     </div>
   </div>
 </template>
