@@ -34,7 +34,7 @@ const { ready, start } = useTimeout(3000, { controls: true });
     <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
         <input type="text" class="p-2 border-2 rounded-lg" placeholder="Username" v-model="username" />
         <input type="password" class="p-2 border-2 rounded-lg" placeholder="Password" v-model="password" />
-        <button type="submit" @submit.prevent="logginIn" class="py-2 text-indigo-200 bg-indigo-600 rounded-lg" >Login</button>    
+        <button type="submit" @submit.prevent="logginIn" class="py-2 text-green-200 bg-green-600 rounded-lg" >Login</button>    
     </form>
     </div>
     <div 
